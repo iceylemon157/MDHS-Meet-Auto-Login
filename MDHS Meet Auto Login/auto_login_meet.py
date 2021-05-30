@@ -2,6 +2,7 @@ from selenium import webdriver
 from time import sleep
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager as CDM
 from datetime import datetime
 
 f = open("user.txt", "r")
@@ -23,7 +24,7 @@ opt.add_experimental_option("prefs", { \
     "profile.default_content_setting_values.notifications": 1
   })
 
-driver = webdriver.Chrome(chrome_options=opt, executable_path='C:/Webdrivers/chromedriver.exe')
+driver = webdriver.Chrome(chrome_options=opt, executable_path=CDM().install())
 
 url = "https://accounts.google.com/signin"
 mail = lines[0]
@@ -93,4 +94,3 @@ driver.get(a)
 driver.find_element_by_xpath('//*[@id="main"]/div[3]/a').click()
 sleep(5)
 driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[2]/div/div[1]/div[2]/div/div[2]/div/div[1]/div[1]').click()
-
