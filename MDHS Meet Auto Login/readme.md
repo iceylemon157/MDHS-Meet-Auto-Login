@@ -1,5 +1,10 @@
 # 明道中學 Meet 自動登入程式
 
+## 介紹
+
+* 30秒內自動幫你進入到 Meet
+* 可以自動判斷現在應該上哪一堂課或手動輸入要上的節數
+
 ## 使用方法
 
 1. 先載好 selenium 跟 webdriver_manager 這兩個 Python Package
