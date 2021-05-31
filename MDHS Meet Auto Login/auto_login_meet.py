@@ -85,12 +85,11 @@ else:
 			time = i + 1
 			break
 
-a = driver.find_element_by_xpath('//*[@id="F_{}_{}_P"]/div'.format(day, time))
-a.click()
-
+driver.find_element_by_xpath('//*[@id="F_{}_{}_P"]/div'.format(day, time))
 sleep(1)
 a = driver.find_element_by_xpath('//*[@id="popupContent"]').get_attribute('src')
 driver.get(a)
 driver.find_element_by_xpath('//*[@id="main"]/div[3]/a').click()
 sleep(5)
+driver.switch_to.window(driver.window_handles[2])
 driver.find_element_by_xpath('//*[@id="yDmH0d"]/c-wiz/div/div/div[9]/div[3]/div/div/div[2]/div/div[1]/div[2]/div/div[2]/div/div[1]/div[1]').click()
