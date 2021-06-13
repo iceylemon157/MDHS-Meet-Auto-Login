@@ -22,8 +22,8 @@ def Login_Google():
         profile.set_preference("permissions.default.microphone", 1)
         profile.set_preference("permissions.default.camera", 1)
         profile.update_preferences()
-
-        driver = webdriver.Firefox(firefox_profile=profile, executable_path=GDM().install())
+        args = ["hide_console", ]
+        driver = webdriver.Firefox(service_args=args, firefox_profile=profile, executable_path=GDM().install())
 
         url = "https://accounts.google.com/signin"
         mail = lines[0]

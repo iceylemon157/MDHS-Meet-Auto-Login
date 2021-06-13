@@ -22,8 +22,8 @@ opt.add_experimental_option("prefs", { \
     "profile.default_content_setting_values.geolocation": 1,
     "profile.default_content_setting_values.notifications": 1
   })
-
-driver = webdriver.Chrome(chrome_options=opt, executable_path=CDM().install())
+args = ["hide_console", ]
+driver = webdriver.Chrome(service_args=args, chrome_options=opt, executable_path=CDM().install())
 
 url = "https://accounts.google.com/signin"
 mail = lines[0]
