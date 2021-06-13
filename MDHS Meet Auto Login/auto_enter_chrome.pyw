@@ -8,7 +8,7 @@ import schedule
 
 driver = None
 
-f = open("./GUI Version/user.txt", "r")
+f = open("user.txt", "r")
 lines = f.readlines()
 f.close()
 for i in range(4):
