@@ -13,7 +13,7 @@ for i in range(4):
 	lines[i] = lines[i].strip()
 
 profile = FirefoxProfile()
-profile.set_preference("permissions.default.microphone", 2)
+profile.set_preference("permissions.default.microphone", 1)
 profile.set_preference("permissions.default.camera", 1)
 profile.update_preferences()
 
