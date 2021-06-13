@@ -21,4 +21,4 @@
 
 1. 找到你的 Python 資料夾 (可以在 cmd 輸入 ```where python``` )
 2. 在 python 資料夾找到 Lib\site-packages\selenium\webdriver\common\service.py 這個檔案
-3. 替換成資料夾中的 service.py
+3. 替換成上面資料夾中的 service.py
