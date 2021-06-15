@@ -102,11 +102,8 @@ def Login_Meet():
 def Login():
         if datetime.now().weekday() > 5:
                 return
-        if driver != None and len(driver.get_log('driver')) == 0:
-                Login_Meet()
-        else:
-                Login_Google()
-                Login_Meet()
+        Login_Google()
+        Login_Meet()
 
 hours = ['08', '09', 10, 11, 13, 14, 15, 16]
 for i in hours:
