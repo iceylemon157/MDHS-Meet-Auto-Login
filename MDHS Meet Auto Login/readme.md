@@ -16,6 +16,7 @@
 2. 選擇要用 Google 或 Firefox 下載相應的程式碼 (auto_enter_google.pyw or auto_enter_firefox.pyw)
 3. 在跟程式碼同一個資料夾下創建一個文字檔案叫做 user.txt，請寫入四行分別依序為 "學校 Gmail 帳號", "學校 Gmail 密碼", "明道雲端平台帳號", "明道雲端平台密碼" (不包含引號)
 4. 雙擊執行程式
+PS: 點下去可能什麼都不會發生，他會在後台運行，直到 25 分自己會打開
 
 ## 關掉小黑框
 
