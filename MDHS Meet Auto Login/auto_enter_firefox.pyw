@@ -94,7 +94,8 @@ def Login_Meet():
 # DISCONNECTED_MSG = 'Unable to evaluate script: disconnected: not connected to DevTools\n'
 
 def Login():
-        
+        if datetime.now().weekday > 5:
+                return
         if driver != None and len(driver.get_log('driver')) == 0:
                 Login_Meet()
         else:
@@ -106,11 +107,6 @@ for i in hours:
         schedule.every().day.at(f'{i}:25:00').do(Login)
 
 if __name__ == '__main__':
-        Day = datetime.now().day
-        if Day < 1 or Day > 5:
-                exit()
         while True:
                 schedule.run_pending()
                 sleep(1)
-                if datetime.now().hour * 60 + datetime.now().minute >= 1030:
-                        break
