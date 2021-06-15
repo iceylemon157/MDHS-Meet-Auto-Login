@@ -100,7 +100,7 @@ def Login_Meet():
 # DISCONNECTED_MSG = 'Unable to evaluate script: disconnected: not connected to DevTools\n'
 
 def Login():
-        if datetime.now().weekday > 5:
+        if datetime.now().weekday() > 5:
                 return
         if driver != None and len(driver.get_log('driver')) == 0:
                 Login_Meet()
