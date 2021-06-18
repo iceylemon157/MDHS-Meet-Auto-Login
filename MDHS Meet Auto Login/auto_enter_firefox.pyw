@@ -29,13 +29,13 @@ def Login_Google():
         mail = lines[0]
         password = lines[1]
         driver.get(url)
-        sleep(2)
+        driver.implictly_wait(5)
         driver.find_element_by_xpath('//input[@type="email"]').send_keys(mail)
         driver.find_element_by_xpath('//*[@id="identifierNext"]').click()
-        sleep(3)
+        driver.implictly_wait(5)
         driver.find_element_by_xpath("//input[@name='password']").send_keys(password)
         driver.find_element_by_id("passwordNext").click()
-        sleep(3)
+        driver.implictly_wait(5)
 
 def Login_Meet():
     crm_url = "http://crm.mingdao.edu.tw/crm/index.asp"
@@ -57,7 +57,7 @@ def Login_Meet():
     driver.find_element_by_xpath(
         '/html/body/table[1]/tbody/tr/td[2]/table/tbody/tr[3]/td/table[1]/tbody/tr[2]/td[2]/div/a[1]').click()
     driver.close()
-    sleep(5)
+    driver.implictly_wait(5)
     driver.switch_to.window(driver.window_handles[-1])
     now = datetime.now()
     day = now.weekday() + 1
